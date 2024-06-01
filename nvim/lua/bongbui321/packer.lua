@@ -13,6 +13,12 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-nvim-lsp")
+  use('hrsh7th/cmp-buffer')
+  use('hrsh7th/cmp-path')
+  use('hrsh7th/cmp-cmdline')
+
   use({
     'folke/tokyonight.nvim',
     as = 'tokyonight',
@@ -22,6 +28,12 @@ return require('packer').startup(function(use)
     })
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
 
   vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })

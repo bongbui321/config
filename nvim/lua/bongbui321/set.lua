@@ -1,6 +1,9 @@
 vim.o.syntax = 'on'
 vim.o.laststatus = 2
 
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
