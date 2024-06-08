@@ -28,12 +28,12 @@ return require('packer').startup(function(use)
   }
 
   use({
-    'folke/tokyonight.nvim',
-    as = 'tokyonight',
-    config = function ()
-      vim.cmd('colorscheme tokyonight-night')
-    end
-    })
+    "oxfist/night-owl.nvim",
+    as = "night-owl",
+    config = function()
+      require("night-owl").setup()
+    end,
+  })
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
