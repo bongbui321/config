@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
   use('hrsh7th/cmp-path')
   use('hrsh7th/cmp-cmdline')
 
+	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
   use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -28,14 +30,13 @@ return require('packer').startup(function(use)
   }
 
   use({
-    "oxfist/night-owl.nvim",
-    as = "night-owl",
+    "rebelot/kanagawa.nvim",
+    as = "kanagawa",
     config = function()
-      require("night-owl").setup()
+      require("kanagawa").load("wave")
     end,
   })
 
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
   use {
     "williamboman/mason.nvim",
