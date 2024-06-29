@@ -17,7 +17,7 @@ local function lsp_keymaps(bufnr)
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 	vim.keymap.set("n", "<leader>f", function()
-		vim.lsp.buf.format({ async = true })
+  vim.lsp.buf.format({ async = true })
 	end, bufopts)
 end
 

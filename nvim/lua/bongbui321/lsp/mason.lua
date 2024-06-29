@@ -2,6 +2,7 @@ local servers = {
   "lua_ls",
   "pyright",
   "tsserver",
+  "clangd",
 }
 
 require("mason").setup()
@@ -21,7 +22,8 @@ for _, server in pairs(servers) do
 		on_attach = require("bongbui321.lsp.handlers").on_attach,
 	}
 
-  server = vim.split(server, "@")[1]
+  -- server = vim.split(server, "@")[1]
+
   local require_ok, conf_opts = pcall(require, "bongbui321.lsp.settings." .. server)
   if require_ok then
     opts = vim.tbl_deep_extend("force", conf_opts, opts)
