@@ -29,12 +29,21 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- use({
+  --   "rebelot/kanagawa.nvim",
+  --   as = "kanagawa",
+  --   config = function()
+  --     require("kanagawa").load("wave")
+  --   end,
+  -- })
+  --
   use({
-    "rebelot/kanagawa.nvim",
-    as = "kanagawa",
-    config = function()
-      require("kanagawa").load("wave")
-    end,
+    "folke/tokyonight.nvim",
+     as = "tokyonight",
+     config = function()
+       vim.cmd('colorscheme tokyonight-night')
+     end,
+
   })
 
 

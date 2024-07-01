@@ -99,12 +99,6 @@ _G.packer_plugins = {
     path = "/home/bongb/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  kanagawa = {
-    config = { "\27LJ\2\n>\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\twave\tload\rkanagawa\frequire\0" },
-    loaded = true,
-    path = "/home/bongb/.local/share/nvim/site/pack/packer/start/kanagawa",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/bongb/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -158,6 +152,12 @@ _G.packer_plugins = {
     path = "/home/bongb/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  tokyonight = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme tokyonight-night\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/bongb/.local/share/nvim/site/pack/packer/start/tokyonight",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/bongb/.local/share/nvim/site/pack/packer/start/undotree",
@@ -166,10 +166,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\twave\tload\rkanagawa\frequire\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
+-- Config for: tokyonight
+time([[Config for tokyonight]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme tokyonight-night\bcmd\bvim\0", "config", "tokyonight")
+time([[Config for tokyonight]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
