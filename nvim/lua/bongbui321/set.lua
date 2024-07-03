@@ -7,7 +7,7 @@ vim.o.smartcase = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
---vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
 vim.opt.smartindent = true
 
