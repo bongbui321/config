@@ -29,14 +29,6 @@ return require('packer').startup(function(use)
     end
   }
 
-   --use({
-   --  "rebelot/kanagawa.nvim",
-   --  as = "kanagawa",
-   --  config = function()
-   --    require("kanagawa").load("wave")
-   --  end,
-   --})
-
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -68,5 +60,13 @@ return require('packer').startup(function(use)
      end,
 
   })
+
+  -- Markdown preview
+  -- cd ~/.local/share/nvim/site/pack/packer/start/
+  -- git clone https://github.com/iamcco/markdown-preview.nvim.git
+  -- cd markdown-preview.nvim
+  -- npx --yes yarn install
+  -- npx --yes yarn build
+  use({ "iamcco/markdown-preview.nvim" })
 
 end)
