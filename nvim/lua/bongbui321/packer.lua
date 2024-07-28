@@ -43,6 +43,15 @@ return require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- Comment plugins and its deps
+  use({
+    "folke/todo-comments.nvim",
+		requires = { {'nvim-lua/plenary.nvim'} },
+    config = function()
+      require('todo-comments').setup {}
+    end
+  })
+
   vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })
 	use('nvim-treesitter/playground')
