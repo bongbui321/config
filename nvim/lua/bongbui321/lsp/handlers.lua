@@ -6,10 +6,24 @@ if not status_cmp_ok then
 	return
 end
 
+local status_telescope_builtin, builtin = pcall(require, "telescope.builtin")
+if not status_telescope_builtin then
+	print("Error: telescope.builtin not found")
+  return
+end
+
 local function lsp_keymaps(bufnr)
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
+  -- these 2 are used with telescope.builtin
 	-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
 	-- vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+
+  -- telescope.builtin
+	vim.keymap.set("n", "gd", builtin.lsp_definitions, bufopts)
+	vim.keymap.set("n", "gr", builtin.lsp_references, bufopts)
+	vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, bufopts)
+	vim.keymap.set("n", "<leader>dn", builtin.diagnostics, bufopts)
+
 	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
@@ -18,7 +32,7 @@ local function lsp_keymaps(bufnr)
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
 	vim.keymap.set("n", "<leader>f", function()
-  vim.lsp.buf.format({ async = true })
+    vim.lsp.buf.format({ async = true })
 	end, bufopts)
 end
 
@@ -30,14 +44,12 @@ M.on_attach = function(client, bufnr)
 
 	lsp_keymaps(bufnr)
 
-	--[[ local status_ok, illuminate = pcall(require, "illuminate")
-	-- if not status_ok then
-	-- 	return
-	-- end
+	local status_illuminate, illuminate = pcall(require, "illuminate")
+	if not status_illuminate then
+		return
+	end
 
-	-- illuminate.on_attach(client)
-  -- ]]
-
+	illuminate.on_attach(client)
 end
 
 return M

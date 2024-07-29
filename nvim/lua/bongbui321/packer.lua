@@ -9,7 +9,6 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.6',
-		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -67,6 +66,7 @@ return require('packer').startup(function(use)
   -- cd markdown-preview.nvim
   -- npx --yes yarn install
   -- npx --yes yarn build
-  use({ "iamcco/markdown-preview.nvim" })
+  use("iamcco/markdown-preview.nvim")
 
+  use("RRethy/vim-illuminate")
 end)
