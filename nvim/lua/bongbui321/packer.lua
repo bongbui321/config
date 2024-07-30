@@ -7,10 +7,10 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.6',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-nvim-lsp")
@@ -69,4 +69,6 @@ return require('packer').startup(function(use)
   use("iamcco/markdown-preview.nvim")
 
   use("RRethy/vim-illuminate")
+
+  use("ojroques/nvim-osc52")
 end)
