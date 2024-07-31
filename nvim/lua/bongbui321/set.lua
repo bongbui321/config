@@ -34,3 +34,11 @@ vim.cmd([[
 ]])
 
 vim.g.mapleader = " "
+
+vim.filetype.add({
+  filename = {
+    ['SConstruct'] = 'python',
+    ['SConscript'] = 'python',
+  },
+})
+
