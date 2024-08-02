@@ -14,9 +14,9 @@ LINUX_OP=$HOME/linux_op
 MAC_OP=$HOME/mac_op
 AGNOS=/Volumes/agnos
 
-[[ -d \$LINUX_OP ]] && alias lo="cd $LINUX_OP && source .venv/bin/activate"
-[[ -d \$MAC_OP ]] && alias mo="cd $MAC_OP && source .venv/bin/activate"
-[[ -d \$AGNOS ]] && alias agnos="cd $AGNOS"
+[[ -d \$LINUX_OP ]] && alias lo="cd \$LINUX_OP && source .venv/bin/activate"
+[[ -d \$MAC_OP ]] && alias mo="cd \$MAC_OP && source .venv/bin/activate"
+[[ -d \$AGNOS ]] && alias agnos="cd \$AGNOS"
 EOF
 
 }
