@@ -14,7 +14,7 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+vim.opt.expandtab = false --insert spaces rather than tab if set to true
 
 vim.cmd('highlight ColorColumn ctermbg=red')
 vim.opt.colorcolumn = "160"
