@@ -10,8 +10,8 @@ function add_script() {
 cat >> $RC_FILE <<- EOF
 
 $CHECK_PATTERN
-LINUX_OP=$HOME/linux_op
-MAC_OP=$HOME/mac_op
+LINUX_OP=\$HOME/linux_op
+MAC_OP=\$HOME/mac_op
 AGNOS=/Volumes/agnos
 
 [[ -d \$LINUX_OP ]] && alias lo="cd \$LINUX_OP && source .venv/bin/activate"
