@@ -43,10 +43,12 @@ vim.filetype.add({
 })
 
 -- autoreload when change on files on disk
-vim.opt.ut= 250
+vim.opt.ut= 800
 vim.opt.autoread = true
-vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-  command = "if mode() != 'c' | checktime | endif",
-  pattern = { "*" },
-})
+
+-- NOTES: These requires a lot of energy. User `:checktime` instead
+--vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "FocusGained" }, {
+--  command = "if mode() != 'c' | checktime | endif",
+--  pattern = { "*" },
+--})
 
