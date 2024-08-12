@@ -51,9 +51,8 @@ return require('packer').startup(function(use)
 
   use('tpope/vim-fugitive')
 
-  use("folke/tokyonight.nvim")
-	use("catppuccin/nvim")
-	use("ellisonleao/gruvbox.nvim")
+	-- Colorscheme
+	use("rose-pine/neovim")
 
   -- Markdown preview
   -- cd ~/.local/share/nvim/site/pack/packer/start/
