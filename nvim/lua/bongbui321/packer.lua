@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
 
 	-- Colorscheme
-	use("rose-pine/neovim")
+	use("folke/tokyonight.nvim")
 
   -- Markdown preview
   -- cd ~/.local/share/nvim/site/pack/packer/start/
