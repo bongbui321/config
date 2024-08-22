@@ -22,6 +22,8 @@ vim.opt.colorcolumn = "160"
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+vim.opt.scrolloff = 8
+
 -- trailing whitespace
 vim.cmd([[
   highlight ExtraWhitespace ctermbg=red guibg=red
@@ -43,7 +45,7 @@ vim.filetype.add({
 })
 
 -- autoreload when change on files on disk
-vim.opt.ut= 800
+vim.opt.ut = 50
 vim.opt.autoread = true
 
 -- NOTES: These requires a lot of energy. User `:checktime` instead
