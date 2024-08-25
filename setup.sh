@@ -6,6 +6,13 @@ else
   link_flags="-sf"
 fi
 
+PACKER_PATH="~/.local/share/nvim/site/pack/packer/start/packer.nvim"
+
+if ! $PACKER_PATH; then
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim\\n \
+			~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
+
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 
 ln $link_flags $DIR/nvim $HOME/.config/nvim
