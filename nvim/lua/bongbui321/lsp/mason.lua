@@ -3,6 +3,7 @@ local servers = {
   "pyright",
   "tsserver",
   "clangd",
+  "rust_analyzer"
 }
 
 require("mason").setup()

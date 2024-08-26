@@ -9,12 +9,12 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
-vim.opt.smartindent = true
+vim.opt.smartindent = false
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.expandtab = false --insert spaces rather than tab if set to true
+vim.opt.expandtab = true --insert spaces rather than tab if set to true
 
 vim.cmd('highlight ColorColumn ctermbg=red')
 vim.opt.colorcolumn = "160"
