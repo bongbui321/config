@@ -36,7 +36,7 @@ local function lsp_keymaps(bufnr)
 	end, bufopts)
 end
 
-local disable_fmt = { "tsserver", "pyright", "lua_ls" }
+local disable_fmt = { "pyright", "lua_ls" }
 M.on_attach = function(client, bufnr)
   if vim.tbl_contains(disable_fmt, client.name) then
 		client.server_capabilities.documentFormattingProvider = false
