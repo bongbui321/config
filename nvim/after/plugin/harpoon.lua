@@ -1,7 +1,5 @@
 local mark = require("harpoon.mark")
 
-  vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })
 local ui = require("harpoon.ui")
 
 vim.keymap.set("n", "<leader>a", mark.add_file)

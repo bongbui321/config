@@ -43,8 +43,6 @@ return require('packer').startup(function(use)
     end
   })
 
-  vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })
 	use('nvim-treesitter/playground')
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
