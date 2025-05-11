@@ -15,11 +15,11 @@ fi
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 
+# remove existing links (why doesn't -sf work???)
 NVIM_DEST=$HOME/.config/nvim
 if [[ -L $NVIM_DEST ]]; then
   rm $NVIM_DEST
 fi
-
 
 TMUX_DEST=$HOME/.tmux.conf
 if [[ -L $TMUX_DEST ]]; then
