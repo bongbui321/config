@@ -50,7 +50,10 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
 
 	-- Colorscheme
-	use("folke/tokyonight.nvim")
+	-- use("folke/tokyonight.nvim")
+  use ({
+    "catppuccin/nvim", as = "catppuccin"
+  })
 
   -- Markdown preview
   -- cd ~/.local/share/nvim/site/pack/packer/start/
