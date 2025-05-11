@@ -1,6 +1,5 @@
 [window]
 option_as_alt = "Both"
-startup_mode = "Fullscreen"
 
 [colors.primary]
 background = "0x000000"
