@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
     end
   })
 
-	use('nvim-treesitter/playground')
+  -- use('nvim-treesitter/playground')
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 
@@ -61,7 +61,6 @@ return require('packer').startup(function(use)
   -- cd markdown-preview.nvim
   -- npx --yes yarn install
   -- npx --yes yarn build
-	--
 	-- TODO: Use this instead: https://github.com/MeanderingProgrammer/render-markdown.nvim?tab=readme-ov-file
   use("iamcco/markdown-preview.nvim")
 
