@@ -4,6 +4,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   link_flags="-sF"
 else
   link_flags="-sf"
+  sudo apt-get update && sudo apt-get install fonts-jetbrains-mono
 fi
 
 PACKER_PATH="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
