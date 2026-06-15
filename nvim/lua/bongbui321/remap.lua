@@ -9,5 +9,5 @@ vim.keymap.set("n", "<M-s>", "<C-W>-")
 
 -- yank relative path of current buffer to clipboard
 vim.keymap.set("n", "<leader>yr", function()
-  vim.fn.setreg("+", vim.fn.expand("%"))
+  vim.fn.setreg("+", vim.fn.expand("%:."))
 end, { desc = "Yank relative path to clipboard" })
