@@ -61,5 +61,5 @@ return require('packer').startup(function(use)
 	-- TODO: Use this instead: https://github.com/MeanderingProgrammer/render-markdown.nvim?tab=readme-ov-file
   use("iamcco/markdown-preview.nvim")
 
-  use("RRethy/vim-illuminate")
+  -- use("RRethy/vim-illuminate")
 end)
