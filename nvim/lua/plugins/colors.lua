@@ -12,13 +12,17 @@
 
 return {
   "ellisonleao/gruvbox.nvim",
-  priority = 1000 ,
+  priority = 1000,
+  lazy = false,
   opts = {
-    terminal_colors = true,
-    contrast = "dark",
+    terminal_colors = false,
+    contrast = "",
   },
-  config = function()
+  config = function(_, opts)
     vim.opt.termguicolors = true
+    require("gruvbox").setup(opts)
     vim.cmd("colorscheme gruvbox")
+    --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
   end,
 }
