@@ -16,4 +16,7 @@ return {
     --   desc = 'Grep prompt',
     -- },
   },
+  config = function()
+    require('telescope').load_extension('fzf')
+  end
 }

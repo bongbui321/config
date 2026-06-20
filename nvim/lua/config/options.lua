@@ -67,10 +67,6 @@ vim.filetype.add({
 vim.opt.updatetime = 300
 vim.opt.autoread = true
 
-vim.diagnostic.config({
-  virtual_text = true,
-})
-
 -- NOTES: These requires a lot of energy. User `:checktime` instead
 --vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "FocusGained" }, {
 --  command = "if mode() != 'c' | checktime | endif",
