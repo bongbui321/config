@@ -37,12 +37,23 @@ local function lsp_keymaps(bufnr)
 end
 
 local disable_fmt = { "tsserver", "pyright", "lua_ls" }
+local disable_semantic_tokens = { clangd = true }
+local disable_illuminate = { c = true, cpp = true }
+
 M.on_attach = function(client, bufnr)
   if vim.tbl_contains(disable_fmt, client.name) then
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
+  if disable_semantic_tokens[client.name] then
+    client.server_capabilities.semanticTokensProvider = nil
+  end
+
 	lsp_keymaps(bufnr)
+
+  if disable_illuminate[vim.bo[bufnr].filetype] then
+    return
+  end
 
 	local status_illuminate, illuminate = pcall(require, "illuminate")
 	if not status_illuminate then

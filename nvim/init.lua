@@ -1,1 +1,2 @@
-require("bongbui321")
+require("config.options")
+require("config.lazy")

@@ -1,4 +1,5 @@
-vim.o.syntax = 'on'
+vim.cmd('syntax enable')
+vim.cmd('filetype plugin indent on')
 vim.o.laststatus = 2
 
 vim.o.ignorecase = true
@@ -63,7 +64,7 @@ vim.filetype.add({
 })
 
 -- autoreload when change on files on disk
-vim.opt.ut = 50
+vim.opt.updatetime = 300
 vim.opt.autoread = true
 
 -- NOTES: These requires a lot of energy. User `:checktime` instead
@@ -71,4 +72,3 @@ vim.opt.autoread = true
 --  command = "if mode() != 'c' | checktime | endif",
 --  pattern = { "*" },
 --})
-
