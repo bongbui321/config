@@ -33,7 +33,7 @@ if [[ -L $ALAC_DEST ]]; then
 fi
 
 ln $link_flags $DIR/nvim $HOME/.config/nvim
-ln $link_flags $DIR/tmux/.tmux.conf $HOME/.tmux.conf
+ln $link_flags $DIR/tmux/local_tmux.conf $HOME/.tmux.conf
 ln $link_flags $DIR/alacritty/ $HOME/.config/alacritty
 
 ./setup_zshrc.sh
