@@ -7,6 +7,10 @@ vim.keymap.set("n", "<M-.>", "<c-w>5>")
 vim.keymap.set("n", "<M-t>", "<C-W>+")
 vim.keymap.set("n", "<M-s>", "<C-W>-")
 
+-- quickfix
+vim.keymap.set("n", "<M-j>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<M-k>", "<cmd>cnext<CR>")
+
 -- yank relative path of current buffer to clipboard
 vim.keymap.set("n", "<leader>yr", function()
   vim.fn.setreg("+", vim.fn.expand("%:."))
