@@ -6,7 +6,7 @@ return {
   },
   keys = {
     { '<leader>f', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
-    { '<leader>g', '<cmd>Telescope live_grep<cr>', desc = 'Live grep' },
+    { '<leader>lg', '<cmd>Telescope live_grep<cr>', desc = 'Live grep' },
     -- { '<C-p>', '<cmd>Telescope git_files<cr>', desc = 'Find git files' },
     -- {
     --   '<leader>fl',
@@ -18,5 +18,6 @@ return {
   },
   config = function()
     require('telescope').load_extension('fzf')
+    require("bongbui321.multigrep").setup()
   end
 }
