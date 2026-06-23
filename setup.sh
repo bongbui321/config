@@ -7,13 +7,6 @@ else
   sudo apt-get update && sudo apt-get install fonts-jetbrains-mono
 fi
 
-PACKER_PATH="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
-
-if [[ ! $PACKER_PATH ]]; then
-	git clone --depth 1 https://github.com/wbthomason/packer.nvim\\n \
-			~/.local/share/nvim/site/pack/packer/start/packer.nvim
-fi
-
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 
 # remove existing links (why doesn't -sf work???)
